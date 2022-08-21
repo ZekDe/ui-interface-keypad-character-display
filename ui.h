@@ -76,7 +76,7 @@ typedef struct
 typedef struct
 {
 	// add label features
-	void (*set_text)(char*, uint8_t);
+	void (*set_text)(cons char*, uint8_t);
 	void (*set_visible)(bool);
 } label_t;
 
@@ -114,7 +114,7 @@ void ui_page0_show(void);
 
 
 
-inline void str_cpy(char *dest_str,char *src_str, uint8_t b_size)
+inline void str_cpy(char *dest_str, const char *src_str, uint8_t b_size)
 {
 	for(uint8_t i = 0; i < b_size; ++i)
 	{
