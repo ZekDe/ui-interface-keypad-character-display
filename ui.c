@@ -16,8 +16,8 @@ pg0_data_t s_pg0_data;
 static void callback_pg0_btn0_pressed(void);
 static void callback_pg0_btn1_pressed(void);
 
-static void callback_pg0_lbl0_set_text(char *pc_str, uint8_t b_size);
-static void callback_pg0_lbl1_set_text(char *pc_str, uint8_t b_size);
+static void callback_pg0_lbl0_set_text(const char *pc_str, uint8_t b_size);
+static void callback_pg0_lbl1_set_text(const char *pc_str, uint8_t b_size);
 
 static void callback_pg0_lbl0_set_visible(bool);
 static void callback_pg0_lbl1_set_visible(bool);
@@ -100,14 +100,14 @@ static void callback_pg0_lbl1_set_visible(bool o_en)
 	}
 }
 
-static void callback_pg0_lbl0_set_text(char *pc_str, uint8_t b_size)
+static void callback_pg0_lbl0_set_text(const char *pc_str, uint8_t b_size)
 {
 	SET_LBL_0_PG0_POS();
 	lcd_write(pc_str, b_size);
 	str_cpy(s_pg0_obj.lbl0, pc_str, b_size);
 }
 
-static void callback_pg0_lbl1_set_text(char *pc_str, uint8_t b_size)
+static void callback_pg0_lbl1_set_text(cont char *pc_str, uint8_t b_size)
 {
 	SET_LBL_1_PG0_POS();
 	lcd_write(pc_str, b_size);
