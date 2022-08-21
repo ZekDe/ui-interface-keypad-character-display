@@ -83,8 +83,8 @@ void lcd_left_to_right(void);
 void lcd_right_to_left(void);
 void lcd_autoscroll_on(void);
 void lcd_autoscroll_off(void);
-void lcd_write(char *pc_str, uint8_t b_size);
-void lcd_write_line(char *pc_str, uint8_t b_size);
+void lcd_write(const char *pc_str, uint8_t b_size);
+void lcd_write_line(const char *pc_str, uint8_t b_size);
 
 void lcd_create_char(uint8_t location, uint8_t charmap[]);
 
