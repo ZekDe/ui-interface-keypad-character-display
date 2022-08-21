@@ -106,7 +106,7 @@ static void lcd_command(uint8_t b_val)
 }
 
 /**
- * @fn void lcd_write(char*, uint8_t)
+ * @fn void lcd_write(const char*, uint8_t)
  * @brief Writes the data to the output stream
  *
  * @pre
@@ -114,7 +114,7 @@ static void lcd_command(uint8_t b_val)
  * @param pc_str
  * @param b_size
  */
-void lcd_write(char *pc_str, uint8_t b_size)
+void lcd_write(const char *pc_str, uint8_t b_size)
 {
 	for(uint8_t i = 0; i < b_size; ++i)
 	{
@@ -123,7 +123,7 @@ void lcd_write(char *pc_str, uint8_t b_size)
 }
 
 /**
- * @fn void lcd_write_line(char*, uint8_t)
+ * @fn void lcd_write_line(const char*, uint8_t)
  * @brief Writes the data followed by the current line to the output stream.
  *
  * @pre
@@ -131,7 +131,7 @@ void lcd_write(char *pc_str, uint8_t b_size)
  * @param pc_str
  * @param b_size
  */
-void lcd_write_line(char *pc_str, uint8_t b_size)
+void lcd_write_line(const char *pc_str, uint8_t b_size)
 {
 	lcd_write(pc_str, b_size);
 	lcd_set_cursor(0, s_pos.row + 1);
