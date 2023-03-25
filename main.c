@@ -16,12 +16,12 @@ void button_task(void *arg)
 	{
 		if (xSemaphoreTake(xSemaphore_btn0,portMAX_DELAY) == pdTRUE)
 		{
-			if(gpio_get_level(GPIO_INPUT_IO_0) == 1)
+			if(gpio_get_level(GPIO_INPUT_IO_0))
 			{
 				vTaskDelay(100 / portTICK_RATE_MS);
 				BTN_ENTER_PGX_handler();
 			}
-			if(gpio_get_level(GPIO_INPUT_IO_1) == 1)
+			if(gpio_get_level(GPIO_INPUT_IO_1))
 			{
 				vTaskDelay(100 / portTICK_RATE_MS);
 				BTN_DOWN_PGX_handler();
